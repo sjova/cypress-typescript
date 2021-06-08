@@ -66,3 +66,13 @@ We will use `describe()` and `it()` in our tests.
 - `npx cypress cache list` - Print all existing installed versions of Cypress
 - `npx cypress cache clear` - Clear the contents of the Cypress cache
 - `npx cypress cache prune` - Deletes all installed Cypress versions from the cache except for the currently installed version
+
+## Revisit ESLint Rules
+
+```json
+"@typescript-eslint/ban-ts-comment": "off",
+"@typescript-eslint/no-empty-function": "off",
+"@typescript-eslint/no-unused-vars": "off"
+
+"cypress/no-unnecessary-waiting": "off"
+```
