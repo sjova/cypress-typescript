@@ -8,7 +8,11 @@
     "yarn": ">=1.22.10"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:spec": "cypress cypress run --spec",
+    "test:ci": "CYPRESS_BASE_URL=https://ci.app.com cypress open",
+    "test:staging": "CYPRESS_BASE_URL=https://staging.app.com cypress open"
   },
   "repository": {
     "type": "git",
@@ -23,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/sjova/cypress-typescript/issues"
   },
-  "homepage": "https://github.com/sjova/cypress-typescript"
+  "homepage": "https://github.com/sjova/cypress-typescript",
+  "devDependencies": {
+    "cypress": "^7.5.0"
+  }
 }
