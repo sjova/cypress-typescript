@@ -3,7 +3,7 @@
 describe('The Kitchen Sink', () => {
   it('Gets, types and asserts', () => {
     // Visits the Kitchen Sink
-    cy.visit('https://example.cypress.io');
+    cy.visit('/');
 
     // finds the content "type" and clicks the link "type"
     cy.contains('type').click();

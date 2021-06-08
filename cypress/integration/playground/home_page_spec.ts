@@ -1,10 +1,10 @@
 describe('The Home Page', () => {
   it('Successfully loads', () => {
-    cy.visit('https://example.cypress.io');
+    cy.visit('/');
   });
 
   it('Include title "Kitchen Sink"', () => {
-    cy.visit('https://example.cypress.io');
+    cy.visit('/');
 
     cy.title().should('include', 'Kitchen Sink');
   });

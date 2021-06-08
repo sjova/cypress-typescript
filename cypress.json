@@ -1,6 +1,13 @@
 {
   "$schema": "https://on.cypress.io/cypress.schema.json",
+  "baseUrl": "https://example.cypress.io",
+  "env": {
+    "exampleVariable": "foo"
+  },
   "pluginsFile": "cypress/plugins/index.ts",
   "supportFile": "cypress/support/index.ts",
-  "video": false
+  "testFiles": "**/*.spec.ts",
+  "video": false,
+  "viewportHeight": 720,
+  "viewportWidth": 1280
 }

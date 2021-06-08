@@ -1,9 +1,7 @@
 describe('DataCy Custom Command', () => {
-  beforeEach(() => {
-    cy.visit('https://example.cypress.io/commands/querying');
-  });
-
   it('best practices - selecting elements', () => {
+    cy.visit('/commands/querying');
+
     // https://on.cypress.io/best-practices#Selecting-Elements
     cy.dataCy('best-practices-selecting-elements').within(() => {
       // Worst - too generic, no context
