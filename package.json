@@ -1,0 +1,27 @@
+{
+  "name": "cypress-typescript",
+  "version": "1.0.0",
+  "description": "Cypress TypeScript Project",
+  "private": true,
+  "engines": {
+    "node": ">=4.17.0",
+    "yarn": ">=1.22.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjova/cypress-typescript.git"
+  },
+  "keywords": [
+    "Cypress",
+    "TypeScript"
+  ],
+  "author": "Saša Jovanović",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sjova/cypress-typescript/issues"
+  },
+  "homepage": "https://github.com/sjova/cypress-typescript"
+}
