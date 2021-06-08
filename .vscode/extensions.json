@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "andrew-codes.cypress-snippets",
+    "chrisbreiding.test-utils",
+    "dbaeumer.vscode-eslint",
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode",
+    "JosefBiehler.cypress-fixture-intellisense",
+    "Shelex.vscode-cy-helper",
+    "tnrich.vscode-extension-open-cypress"
+  ]
+}
