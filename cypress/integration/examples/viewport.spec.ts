@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 describe('Viewport', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/commands/viewport');

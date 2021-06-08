@@ -1,6 +1,6 @@
 // Reference: https://docs.cypress.io/guides/getting-started/writing-your-first-test#Write-a-real-test
 
-describe('My First Test', () => {
+describe('The Kitchen Sink', () => {
   it('Gets, types and asserts', () => {
     // Visits the Kitchen Sink
     cy.visit('https://example.cypress.io');

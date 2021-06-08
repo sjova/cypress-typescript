@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 describe('Aliasing', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/commands/aliasing');

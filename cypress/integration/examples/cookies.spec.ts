@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 describe('Cookies', () => {
   beforeEach(() => {
     Cypress.Cookies.debug(true);

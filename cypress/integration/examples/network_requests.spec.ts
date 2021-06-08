@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 describe('Network Requests', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/commands/network-requests');

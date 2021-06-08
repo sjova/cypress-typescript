@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 describe('Utilities', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/utilities');

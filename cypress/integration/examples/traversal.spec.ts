@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 describe('Traversal', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/commands/traversal');

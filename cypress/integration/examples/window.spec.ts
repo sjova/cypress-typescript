@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 describe('Window', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/commands/window');
