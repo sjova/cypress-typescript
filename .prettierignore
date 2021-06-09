@@ -1,16 +1,15 @@
-# .eslintcache
 .husky
-# .idea
-# .vscode
-# .yarn-integrity
+.idea
+.vscode
+.yarn-integrity
 cypress/fixtures/profile.json
 cypress/fixtures/users.json
-# cypress/screenshots
-# cypress/videos
+cypress/screenshots
+cypress/videos
 node_modules
-# npm-debug.log*
-# package-lock.json
-# tmp
-# yarn-debug.log*
-# yarn-error.log*
+npm-debug.log*
+package-lock.json
+tmp
+yarn-debug.log*
+yarn-error.log*
 yarn.lock

@@ -4,13 +4,14 @@ declare global {
   namespace Cypress {
     interface Chainable {
       /**
-       * Select DOM element by data-cy attribute
+       * Adds two numbers asynchronously
        *
-       * @param {string} value - Attribute value
+       * @param {number} a
+       * @param {number} b
        * @example
-       *    cy.dataCy('greeting')
+       *    cy.asyncAdd(2, 3).should('equal', 5)
        */
-      dataCy(value: string): Chainable<JQuery<HTMLElement>>;
+      asyncAdd(a: number, b: number): void;
 
       /**
        * Check token in Local Storage
@@ -22,15 +23,6 @@ declare global {
       checkToken(token: string): void;
 
       /**
-       * Login user with specified email and password
-       *
-       * @param {User} user - User object
-       * @example
-       *    cy.typeLogin({ email: 'fake@email.com', password: 'Secret1' })
-       */
-      typeLogin(user: User): void;
-
-      /**
        * Click on a link with a specific label
        *
        * @param {string} label - Link label
@@ -38,6 +30,15 @@ declare global {
        *    cy.clickLink('Buy Now')
        */
       clickLink(label: string): Cypress.Chainable<JQuery<HTMLAnchorElement>>;
+
+      /**
+       * Select DOM element by data-cy attribute
+       *
+       * @param {string} value - Attribute value
+       * @example
+       *    cy.dataCy('greeting')
+       */
+      dataCy(value: string): Chainable<JQuery<HTMLElement>>;
 
       /**
        * Get Session Storage - Returns the current value associated with the given key,
@@ -58,6 +59,15 @@ declare global {
        *    cy.setSessionStorage('abc123')
        */
       setSessionStorage(key: string): void;
+
+      /**
+       * Login user with specified email and password
+       *
+       * @param {User} user - User object
+       * @example
+       *    cy.typeLogin({ email: 'fake@email.com', password: 'Secret1' })
+       */
+      typeLogin(user: User): void;
     }
   }
 }

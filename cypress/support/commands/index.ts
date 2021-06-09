@@ -1,3 +1,4 @@
+export * from './async-add';
 export * from './check-token';
 export * from './click-link';
 export * from './data-cy';

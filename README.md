@@ -100,3 +100,34 @@ We will use `describe()` and `it()` in our tests.
  *    cy.foo('example123')
  */
 ```
+
+## Useful Docs
+
+- Getting Started
+
+  - [Installing Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress)
+  - [Writing Your First Test](https://docs.cypress.io/guides/getting-started/writing-your-first-test)
+  - [Testing Your App](https://docs.cypress.io/guides/getting-started/testing-your-app#Get-started)
+
+- Tooling
+
+  - [TypeScript](https://docs.cypress.io/guides/tooling/typescript-support)
+  - [IDE Integration](https://docs.cypress.io/guides/tooling/IDE-integration)
+
+- Core Concepts
+
+  - [Writing and Organizing Tests](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests)
+  - [The Test Runner](https://docs.cypress.io/guides/core-concepts/test-runner#Overview)
+
+- Guides
+
+  - [Debugging](https://docs.cypress.io/guides/guides/debugging)
+
+- References
+
+  - **[Best Practices](https://docs.cypress.io/guides/references/best-practices)**
+  - [Assertions](https://docs.cypress.io/guides/references/assertions)
+  - [Bundled Tools](https://docs.cypress.io/guides/references/bundled-tools)
+
+- **[Recipes](https://docs.cypress.io/examples/examples/recipes)**
+- **[FAQ Using Cypress](https://docs.cypress.io/faq/questions/using-cypress-faq)**
