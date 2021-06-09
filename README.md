@@ -29,10 +29,6 @@ yarn --version
 
 Initially, you need to run `yarn install`. After that, you can execute Cypress with one of these two npm scripts: `yarn cy:open` or `yarn cy:run`.
 
-## Visual Studio Code
-
-TODO: Will add more details
-
 ### Visual Studio Code Extensions
 
 - [Cypress Fixture-IntelliSense](https://marketplace.visualstudio.com/items?itemName=JosefBiehler.cypress-fixture-intellisense): Supports your [cy.fixture\(\)](https://docs.cypress.io/api/commands/fixture) and [cy.route\(..., "fixture:"\)](https://docs.cypress.io/api/commands/route) commands by providing intellisense for existing fixtures.
@@ -43,9 +39,9 @@ TODO: Will add more details
 
 The above extensions are included in the project recommended extensions configuration file.
 
-## ESLint, Prettier, Husky
+## Prettier & ESLint
 
-TODO: Will add more details
+This project uses [Prettier](https://prettier.io/) and [ESLint](https://eslint.org/). IDE editors with appropriate support or extensions will run linters. Also, you can use `yarn prettier` and `yarn eslint`. And just in case, we run Prettier and ESLint against staged git files.
 
 ## Cypress Integration Tests
 
@@ -65,7 +61,16 @@ We will use `describe()` and `it()` in our tests.
 ```json
 {
   "$schema": "https://on.cypress.io/cypress.schema.json",
-  "baseUrl": "http://localhost:8080",
+  "baseUrl": "https://example.cypress.io",
+  "env": {
+    "exampleVariable": "foo"
+  },
+  "pluginsFile": "cypress/plugins/index.ts",
+  "supportFile": "cypress/support/index.ts",
+  "testFiles": "**/*.spec.ts",
+  "video": false,
+  "viewportHeight": 720,
+  "viewportWidth": 1280,
   "ignoreTestFiles": ["**/examples/*.spec.js", "**/playground/*.spec.js"]
 }
 ```
@@ -77,12 +82,21 @@ We will use `describe()` and `it()` in our tests.
 - `npx cypress cache clear` - Clear the contents of the Cypress cache
 - `npx cypress cache prune` - Deletes all installed Cypress versions from the cache except for the currently installed version
 
-## Revisit ESLint Rules
+## JSDoc Example
 
-```json
-"@typescript-eslint/ban-ts-comment": "off",
-"@typescript-eslint/no-empty-function": "off",
-"@typescript-eslint/no-unused-vars": "off"
-
-"cypress/no-unnecessary-waiting": "off"
+```ts
+/**
+ * @deprecated Use `cy.abc()` instead.
+ *
+ * @todo Write the documentation.
+ *
+ * Lorem ipsum dolor sit amet, consectetur adipiscing elit
+ *
+ * @param {string} name - User name
+ * @param {number} age - Age of the user
+ * @param {CustomOptions} [options] Pass some options object to change the default behavior of `cy.xyz()`
+ * @returns some result
+ * @example
+ *    cy.foo('example123')
+ */
 ```
