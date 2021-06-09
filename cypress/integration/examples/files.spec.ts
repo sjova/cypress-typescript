@@ -39,6 +39,7 @@ describe('Files', () => {
     expect(this.example, 'fixture in the test context').to.deep.equal(requiredExample);
 
     // or use "cy.wrap" and "should('deep.equal', ...)" assertion
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     cy.wrap(this.example, 'fixture vs require').should('deep.equal', requiredExample);
   });

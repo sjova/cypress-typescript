@@ -81,7 +81,9 @@ describe('Utilities', () => {
      */
     function waitOneSecond() {
       // return a promise that resolves after 1 second
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore TS2351 (new Cypress.Promise)
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       return new Cypress.Promise((resolve, reject) => {
         setTimeout(() => {
           // set waited to true
@@ -96,6 +98,7 @@ describe('Utilities', () => {
     cy.then(() => {
       // return a promise to cy.then() that
       // is awaited until it resolves
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore TS7006
       return waitOneSecond().then((str) => {
         expect(str).to.eq('foo');

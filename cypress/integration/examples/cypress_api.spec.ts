@@ -19,6 +19,7 @@ describe('Cypress.Commands', () => {
         method = method || 'log';
 
         // log the subject to the console
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore TS7017
         console[method]('The subject is', subject);
 
@@ -29,10 +30,12 @@ describe('Cypress.Commands', () => {
       }
     );
 
-    // @ts-ignore TS2339
     cy.get('button')
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore TS2339
       .console('info')
-      .then(($button) => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      .then(($button: unknown) => {
         // subject is still $button
       });
   });

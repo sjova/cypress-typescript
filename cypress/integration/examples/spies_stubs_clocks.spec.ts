@@ -7,6 +7,7 @@ describe('Spies, Stubs, and Clock', () => {
     cy.visit('https://example.cypress.io/commands/spies-stubs-clocks');
 
     const obj = {
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
       foo() {},
     };
 
@@ -25,7 +26,8 @@ describe('Spies, Stubs, and Clock', () => {
        * Prints the argument passed
        * @param x {any}
        */
-      foo(x) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      foo(x: any) {
         console.log('obj.foo called with', x);
       },
     };
@@ -53,7 +55,7 @@ describe('Spies, Stubs, and Clock', () => {
        * @param a {string}
        * @param b {string}
        */
-      foo(a, b) {
+      foo(a: string, b: string) {
         console.log('a', a, 'b', b);
       },
     };
@@ -100,7 +102,7 @@ describe('Spies, Stubs, and Clock', () => {
        * Greets a person
        * @param {string} name
        */
-      greet(name) {
+      greet(name: string) {
         return `Hello, ${name}!`;
       },
     };
@@ -113,11 +115,13 @@ describe('Spies, Stubs, and Clock', () => {
       .throws(new Error('Invalid name'));
 
     expect(greeter.greet('World')).to.equal('Hi');
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     expect(() => greeter.greet(42)).to.throw('Invalid name');
     expect(greeter.greet).to.have.been.calledTwice;
 
     // non-matched calls goes the actual method
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     expect(greeter.greet()).to.equal('Hello, undefined!');
   });
@@ -131,7 +135,7 @@ describe('Spies, Stubs, and Clock', () => {
        * @param a {number}
        * @param b {number}
        */
-      add(a, b) {
+      add(a: number, b: number) {
         return a + b;
       },
     };
@@ -159,7 +163,7 @@ describe('Spies, Stubs, and Clock', () => {
      * Returns true if the given number is event
      * @param {number} x
      */
-    const isEven = (x) => x % 2 === 0;
+    const isEven = (x: number) => x % 2 === 0;
 
     // expect the value to pass a custom predicate function
     // the second argument to "sinon.match(predicate, message)" is
@@ -171,14 +175,14 @@ describe('Spies, Stubs, and Clock', () => {
      * @param {number} limit
      * @returns {(x: number) => boolean}
      */
-    const isGreaterThan = (limit) => (x) => x > limit;
+    const isGreaterThan = (limit: number) => (x: number) => x > limit;
 
     /**
      * Returns a function that checks if a given number is less than the limit
      * @param {number} limit
      * @returns {(x: number) => boolean}
      */
-    const isLessThan = (limit) => (x) => x < limit;
+    const isLessThan = (limit: number) => (x: number) => x < limit;
 
     // you can combine several matchers using "and", "or"
     expect(spy).to.be.calledWith(
