@@ -71,7 +71,7 @@ We will use `describe()` and `it()` in our tests.
   "video": false,
   "viewportHeight": 720,
   "viewportWidth": 1280,
-  "ignoreTestFiles": ["**/examples/*.spec.js", "**/playground/*.spec.js"]
+  "ignoreTestFiles": ["**/examples/*.spec.ts", "**/playground/*.spec.ts"]
 }
 ```
 
